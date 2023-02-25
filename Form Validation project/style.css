@@ -1,0 +1,42 @@
+#container,
+#form {
+  margin: auto;
+  width: 20%;
+  border: 3px solid green;
+  padding: 10px;
+  text-align: center;
+  background-color: antiquewhite;
+  border-radius: 10px;
+}
+.hfour {
+  text-align: left;
+}
+.input {
+  width: 16rem;
+  height: 2rem;
+  border-radius: 1rem;
+}
+
+#submitBtn {
+  height: 2rem;
+  width: 16rem;
+  background-color: brown;
+  color: azure;
+  border-radius: 5px;
+}
+#successDialogue {
+  height: 2rem;
+  width: 30rem;
+  background-color: greenyellow;
+  color: black;
+  text-align: center;
+  vertical-align: middle;
+  font-size: x-large;
+  font-weight: 400;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #ffff00;
+  padding: 10px;
+}

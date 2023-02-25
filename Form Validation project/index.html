@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <form onsubmit="submitOk()" id="myForm">
+        <h2>Register with us!</h2>
+        <h4 class="hfour">Username</h4>
+        <input
+          type="text"
+          id="username"
+          placeholder="Enter username"
+          class="input"
+        /><br />
+        <small style="display: none" id="usernameSmall"
+          >Username must be atleast 3 characters</small
+        >
+        <h4 class="hfour">Email</h4>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter email"
+          class="input"
+        /><br />
+        <small style="display: none" id="emailSmall">Email is not valid</small>
+        <h4 class="hfour">Password</h4>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter password"
+          class="input"
+        /><br />
+        <small style="display: none" id="passwordSmall"
+          >Password must be at least 6 characters</small
+        >
+        <h4 class="hfour">Confirm password</h4>
+        <input
+          type="password"
+          id="cnfmPassword"
+          placeholder="Enter password again"
+          class="input"
+        /><br />
+        <small style="display: none" id="cnfmPasswordSmallOne"
+          >Password2 is required</small
+        ><br /><br />
+        <small style="display: none" id="cnfmPasswordSmallTwo"
+          >Passwords do not match</small
+        >
+        <button type="submit" id="submitBtn">Submit</button>
+        <p id="btnSmall" style="display: none">*All Fields are required</p>
+      </form>
+    </div>
+    <div id="successDialogue" style="display: none"></div>
+    <!------------------------------------------JAVASCRIPT------------------------------------------------>
+    <script type="text/javascript" src="/app.js"></script>
+  </body>
+</html>

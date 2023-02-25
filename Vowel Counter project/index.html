@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vowel Counter</title>
+    <style>
+      #container {
+        text-align: center;
+        width: 50%;
+        margin: 0% auto;
+      }
+      #countBtn {
+        background-color: #4caf50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+      }
+      textarea {
+        width: 100%;
+        height: 150px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        font-size: 16px;
+        resize: none;
+      }
+      input[type="numeric"] {
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h2>Vowel Counter</h2>
+      <textarea id="userInput" cols="30" rows="5"></textarea><br />
+      <button id="countBtn">Count</button>
+      <div id="resultContainer">
+        <br />
+        <p>Result</p>
+        <input type="numeric" id="result" readonly />
+      </div>
+    </div>
+    <script>
+      const textContent = document.getElementById("userInput");
+      const countButton = document.getElementById("countBtn");
+      let resultBox = document.getElementById("result");
+
+      const vowelArray = ["a", "e", "i", "o", "u"];
+      countButton.addEventListener("click", function () {
+        let count = 0;
+        for (i = 0; i <= textContent.value.length - 1; i++) {
+          let currentLetter = textContent.value[i]; //Individually looping through string characters
+
+          for (j = 0; j <= vowelArray.length - 1; j++) {
+            // console.log(textContent.value[i], vowelArray[j]);
+            if (currentLetter == vowelArray[j]) {
+              // console.log('matching');
+              count += 1;
+            }
+          }
+        }
+        resultBox.value = count;
+      });
+    </script>
+  </body>
+</html>
